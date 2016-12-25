@@ -7,6 +7,7 @@ import './index.css';
 import Profile from './components/Profile';
 import Range from './components/Range';
 import List from './components/List';
+import Handler from './components/Handler';
 
 const data = {
     "login": "ryanzhao1993",
@@ -83,29 +84,8 @@ class App extends Component {
 }
 
 class Count extends Component {
-    constructor() {
-        super();
-        this.state = {
-            val: 0
-        };
-    }
-
-    update(event) {
-        this.setState({
-            val: this.state.val + 1
-        });
-    }
-    componentWillMount() {
-        console.log('componentWillMount');
-    }
-    componentDidMount() {
-        console.log('componentDidMount');
-    }
     render() {
-        console.log('render');
-        return (
-            <button onClick={this.update.bind(this)}>{this.state.val}</button>
-        );
+        return <Handler />;
     }
 }
 
