@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ReactDOM, { render, findDOMNode } from 'react-dom';
+
 import Cycle from './Cycle';
 class Handler extends Component {
     constructor() {
@@ -20,6 +22,10 @@ class Handler extends Component {
         });
     }
 
+    remove() {
+        ReactDOM.unmountComponentAtNode(document.getElementById('app'));
+    }
+
     render() {
         if(this.state.destroyed) {
             return null;
@@ -29,6 +35,7 @@ class Handler extends Component {
                 <Cycle val={this.state.val} />
                 <button onClick={this.update.bind(this)}>{this.state.val}</button>
                 <button onClick={this.toDestroy.bind(this)}>组件移除</button>
+                <button onClick={this.remove.bind(this)}>组件unmount</button>
             </div>
         );
     }

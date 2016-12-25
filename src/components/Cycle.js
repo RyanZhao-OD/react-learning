@@ -23,8 +23,8 @@ class Cycle extends Component {
     componentDidMount() {
         console.log('---componentDidMount');
     }
-    componentWillUnMount() {
-        console.log('---componentWillUnMount');
+    componentWillUnmount() {
+        console.log('---componentWillUnmount');
     }
     render() {
         console.log('---render');
