@@ -43,3 +43,11 @@
 - IndexLink
 - browserHistory
 - this.context.router
+
+## Conform Navigation
+
+路由前跳转确认 场景：询问是否保存数据 转场动画等
+
+```javascript
+this.context.router.setRouteLeaveHook
+```
