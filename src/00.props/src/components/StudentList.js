@@ -26,11 +26,14 @@ export default class StudentList extends Component {
         return (
             <ul>
             {
-                studentList.map(student => {
-                    return (
-                        <Student key={student.id} name={student.name} age={student.age}>{student.children}</Student>
-                    );
-                })
+                studentList.map(student =>
+                    <Student
+                        key={student.id}
+                        name={student.name}
+                        age={student.age}>
+                        {student.children}
+                    </Student>
+                )
             }
                 <Student name="aaa" age="13"><span>children dom</span></Student>
             </ul>

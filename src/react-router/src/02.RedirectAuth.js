@@ -27,7 +27,7 @@ const RedirectAuth = () => (
             <PrivateRoute path="/protected" component={Protected}/>
         </div>
     </Router>
-)
+);
 
 const fakeAuth = {
     isAuthenticated: false,
