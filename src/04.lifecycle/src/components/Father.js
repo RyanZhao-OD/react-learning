@@ -20,6 +20,11 @@ import Son from './Son';
    componentWillUpdate() -> render() -> componentDidUpdate()
  * 如果是forceUpdate()：
    componentWillUpdate() -> render() -> componentDidUpdate()
+
+ * (3)销毁期
+ * componentWillUnmount()
+ * 每当组件使用完成，这个组件就必须从DOM中销毁，此时该方法就会被调用。
+ * 当我们在组件中使用了setInterval，那我们就需要在这个方法中调用clearTimeout。
  */
 export default class Father extends Component {
     // 实例属性写法 就不需要在constructor中定义了
