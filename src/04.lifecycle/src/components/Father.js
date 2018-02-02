@@ -57,7 +57,7 @@ export default class Father extends Component {
         return  (
             <div>Father {this.state.state1} {this.state.state2}
             {
-                !this.state.showSon ? null : (
+                this.state.showSon && (
                     <Son key="4"
                         sonProp1={this.state.propForSon1}
                         sonProp2={this.state.propForSon2}

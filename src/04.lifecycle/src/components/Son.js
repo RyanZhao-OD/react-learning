@@ -60,6 +60,7 @@ export default class Son extends Component {
     }
 
     componentWillUnmount() {
+        console.log('销毁期===================');
         console.log('Son componentWillUnmount-----');
     }
 }
